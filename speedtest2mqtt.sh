@@ -1,16 +1,18 @@
 #!/bin/bash
 
-# Only edit the following setup lines with correct login information
+## Speedtest2Mqtt Shell script
 
-# Mosquitto Broker Details
-
+# Login information For MQTT Broker
 mqttuser=
 mqttpassword=
 mqttbroker=xx.xx.xx.xx
 mqttport=1883
+
+# Other Settings
+
 homeassistant=false
 
-# DO NOT ALTER ANYTHING BELOW THIS LINE
+# Run SpeedTest and get variables from Json
 
 speedtest_result=$( /usr/bin/speedtest --format=json --accept-license --accept-gdpr)
 echo "**********************************************************************************************"
